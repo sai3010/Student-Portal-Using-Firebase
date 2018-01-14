@@ -1,17 +1,27 @@
 $(document).ready(function() {
     Materialize.updateTextFields();
   });
+ // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyAqIvSVJoknpvLJHG6Qn0om0JDfGVgJqdE",
+    authDomain: "webapp-faf2d.firebaseapp.com",
+    databaseURL: "https://webapp-faf2d.firebaseio.com",
+    projectId: "webapp-faf2d",
+    storageBucket: "webapp-faf2d.appspot.com",
+    messagingSenderId: "294281955476"
+    };
+    firebase.initializeApp(config);
 
 /* log in starts here*/
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    window.location="stud.html";
+    window.location="home.html"
+    alert("Logged in successfully");
 
   } else {
     // No user is signed in.
-
-    
+    alert("logged out sucessfully");
   }
 });
 function create(){
