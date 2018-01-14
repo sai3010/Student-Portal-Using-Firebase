@@ -14,8 +14,11 @@
   window.location="index.html"
 }
 document.getElementById('registercard').onclick=function() {
-	window.location="stud.html"
+	window.location="studcreate.html"
 }
 document.getElementById('uinfocard').onclick=function() {
     window.location="studupdate.html"
+}
+document.getElementById('updatescard').onclick=function() {
+    window.location="view.html"
 }
